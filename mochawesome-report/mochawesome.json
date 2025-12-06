@@ -1,0 +1,231 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-06T19:24:09.558Z",
+    "end": "2025-12-06T19:24:09.685Z",
+    "duration": 127,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7ac2d97-00e4-41aa-8758-8d09026a000c",
+      "title": "",
+      "fullFile": "C:\\vscode\\ProjetoCodeceptJS\\consulta_veic_test.js",
+      "file": "\\consulta_veic_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+          "title": "Consulta de veículos",
+          "fullFile": "C:\\vscode\\ProjetoCodeceptJS\\consulta_veic_test.js",
+          "file": "\\consulta_veic_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Consulta de veículos\"",
+              "fullTitle": "Consulta de veículos \"before all\" hook: codeceptjs.beforeSuite in \"Consulta de veículos\"",
+              "timedOut": false,
+              "duration": 4,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "suiteSetup(suite)",
+              "err": {},
+              "uuid": "e0cfb9d7-15d4-4741-8f3a-4120b6075a01",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Consulta de veículos\"",
+              "fullTitle": "Consulta de veículos \"before each\" hook: codeceptjs.before in \"Consulta de veículos\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "setup(suite)",
+              "err": {},
+              "uuid": "458fc10b-4cc6-4775-81b4-c681eb3c1426",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Consulta de veículos\"",
+              "fullTitle": "Consulta de veículos \"after all\" hook: codeceptjs.afterSuite in \"Consulta de veículos\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "suiteTeardown(suite)",
+              "err": {},
+              "uuid": "08672084-91b3-4c43-bcb9-64531062677f",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Consulta de veículos\"",
+              "fullTitle": "Consulta de veículos \"after each\" hook: finalize codeceptjs in \"Consulta de veículos\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "teardown(suite)",
+              "err": {},
+              "uuid": "091ff7a5-f3ee-4f4d-bae3-5c43d0cfe7d2",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Consulta veículos",
+              "fullTitle": "Consulta de veículos: Consulta veículos",
+              "timedOut": false,
+              "duration": 80,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => \n{\n    I.sendGetRequest('/api/cars');\n    I.seeResponseCodeIs(200);",
+              "err": {},
+              "uuid": "785df4fa-92fc-468b-8543-079a1fdf6f26",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastra veículos - 201",
+              "fullTitle": "Consulta de veículos: Cadastra veículos - 201",
+              "timedOut": false,
+              "duration": 14,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) =>\n{\n    I.sendPostRequest('/api/cars',  \n    {\n        \"brand\": \"Ford\",\n        \"model\": \"fusca\",\n        \"year\": \"1978\"\n    });\n    I.seeResponseCodeIs(201);\n    I.seeResponseContainsJson({\n      message: \"Car successfully registered!\",\n      carId: 6,\n    });",
+              "err": {},
+              "uuid": "2210b070-b6b5-4ea8-b778-ef38db0e675a",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastra veículos - 500",
+              "fullTitle": "Consulta de veículos: Cadastra veículos - 500",
+              "timedOut": false,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  I.sendPostRequest(\"/api/cars\", \n{\n    brand: \"volks\",\n    model: \"up tsi\",\n    year: 2020,\n  });\n  I.seeResponseCodeIs(500);\n  I.seeResponseContainsJson({\n    message: \"Internal server error: model 'up tsi' is not allowed.\",\n  });",
+              "err": {},
+              "uuid": "12bedcc8-51ce-46ca-ae61-fec72fd1cd94",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastra veículos - 404",
+              "fullTitle": "Consulta de veículos: Cadastra veículos - 404",
+              "timedOut": false,
+              "duration": 8,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  I.sendPostRequest(\"/api/cars\", \n  {\n    brand: \"volks\",\n    model: \"r10\",\n    year: 2020,\n  });\n  I.seeResponseCodeIs(404);\n  I.seeResponseContainsJson({\n    message: \"Vehicle not found.\",\n  });",
+              "err": {},
+              "uuid": "71fbcab0-c0f4-44c5-b547-6a3bd4ba51ac",
+              "parentUUID": "19d96b05-ce75-4fcd-983f-eeeb2747b859",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "785df4fa-92fc-468b-8543-079a1fdf6f26",
+            "2210b070-b6b5-4ea8-b778-ef38db0e675a",
+            "12bedcc8-51ce-46ca-ae61-fec72fd1cd94",
+            "71fbcab0-c0f4-44c5-b547-6a3bd4ba51ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 110,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {},
+      "version": "6.3.2"
+    }
+  }
+}
